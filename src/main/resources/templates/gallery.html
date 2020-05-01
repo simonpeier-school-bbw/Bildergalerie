@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M152 - Gallery</title>
+    <link href="webjars/bootstrap/4.3.1/css/bootstrap.min.css"
+          rel="stylesheet">
+    <!-- Photoswipe files-->
+    <link rel="stylesheet" href="css/photoswipe.css">
+    <link rel="stylesheet" href="css/default-skin/default-skin.css">
+    <script src="js/photoswipe.min.js"></script>
+    <script src="js/photoswipe-ui-default.min.js"></script>
+</head>
+<body id="body" class="background1">
+<div class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">M152</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="/">Home</a>
+                <a class="nav-item nav-link active" href="#">Gallery <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="/metadata">Metadata</a>
+            </div>
+        </div>
+    </nav>
+    <h1 class="my-4">Gallery</h1>
+    <button class="btn btn-primary my-4" id="openGallery">Open Gallery</button>
+    <div class="thumbnail">
+        <img src="img/cat.jpg" alt="Lights" style="width:100%">
+    </div>
+    <!-- photo gallery-->
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">->
+                    <div class="pswp__counter"></div>
+                    <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                    <button class="pswp__button pswp__button--share" title="Share"></button>
+                    <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                    <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div>
+                <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+                </button>
+                <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+                </button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="webjars/jquery/3.3.1-2/jquery.min.js"></script>
+<script src="webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<!-- Photoswipe scripts -->
+<script src="js/photoswipe.min.js"></script>
+<script src="js/photoswipe-ui-default.min.js"></script>
+<script src="js/photoswipe-loader.js"></script>
+</body>
+</html>
