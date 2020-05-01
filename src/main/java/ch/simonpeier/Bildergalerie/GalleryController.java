@@ -48,4 +48,9 @@ public class GalleryController {
     public String showGallery(){
         return "gallery";
     }
+
+    @GetMapping("/video")
+    public String showVideo(){
+        return "video";
+    }
 }
