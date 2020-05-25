@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Useful examples of animations. Includes animations using the @keyframe rule.">
+    <title>M152 - Animations</title>
+    <link href="css/animation.css" rel="stylesheet">
+    <link href="webjars/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body id="body" class="background1">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+        <a class="navbar-brand" href="/">M152</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link" href="/">Home</a>
+                <a class="nav-item nav-link" href="/gallery">Gallery</a>
+                <a class="nav-item nav-link" href="/video">Video</a>
+                <a class="nav-item nav-link active" href="/animations">Animations <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="/metadata">Metadata</a>
+            </div>
+        </div>
+    </div>
+</nav>
+<div class="container my-3">
+    <h1 class="my-4">Animations</h1>
+    <h2 class="my-3">Simple animations</h2>
+    <h3 class="my-3">Transitions</h3>
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered">
+            <thead>
+            <tr>
+                <th scope="col">Property</th>
+                <th scope="col">Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>transition</td>
+                <td>A shorthand property for combining all transition properties on one line</td>
+            </tr>
+            <tr>
+                <td>transition-delay</td>
+                <td>Specifies a delay for the start of a transition</td>
+            </tr>
+            <tr>
+                <td>transition-duration</td>
+                <td>Specifies how long a transition takes to complete
+                </td>
+            </tr>
+            <tr>
+                <td>transition-property</td>
+                <td>Specifies the CSS property to change
+                </td>
+            </tr>
+            <tr>
+                <td>transition-timing-function</td>
+                <td>Specifies in which time one animation cycle should be completed
+                    <img class="mt-2" src="img/speed-curves.png" alt="speed curves" style="width:100%">
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <p class="my-3">CSS transitions allows to change property values smoothly, over a given duration. It is mostly used
+        in combination with the :hover class.
+    </p>
+    <h4 class="my-3">Example</h4>
+    <p class="my-3">This transition changes the size, color and the border radius on hover. It uses the speed curve
+        function
+        ease-in-out.</p>
+    <button class="tr-button">Hover over me</button>
+    <h3 class="my-3">@keyframe</h3>
+    <p class="my-3">The css style defined inside a keyframe rule, will gradually change the current style to the new one
+        at certain times.</p>
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered">
+            <thead>
+            <tr>
+                <th scope="col">Property</th>
+                <th scope="col">Description</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>animation</td>
+                <td>A shorthand property for combining all animation properties on one line</td>
+            </tr>
+            <tr>
+                <td>animation-delay</td>
+                <td>Specifies a delay for the start of an animation</td>
+            </tr>
+            <tr>
+                <td>animation-direction</td>
+                <td>Specifies in which direction an animation should be played (forwards, backwards, alternate cycles)
+                </td>
+            </tr>
+            <tr>
+                <td>animation-duration</td>
+                <td>Specifies in which time one animation cycle should be completed</td>
+            </tr>
+            <tr>
+                <td>animation-fill-mode</td>
+                <td>
+                    Specifies a style for the element when the animation is not playing (before it starts, after it
+                    ends, or both)
+                </td>
+            </tr>
+            <tr>
+                <td>animation-iteration-count</td>
+                <td>Specifies the number of times an animation should be played</td>
+            </tr>
+            <tr>
+                <td>animation-name</td>
+                <td>Specifies the name of the @keyframes animation</td>
+            </tr>
+            <tr>
+                <td>animation-play-state</td>
+                <td>Specifies whether the animation is running or paused</td>
+            </tr>
+            <tr>
+                <td>animation-timing-function</td>
+                <td>Specifies the speed curve of the animation</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <h4 class="my-3">Example</h4>
+    <p class="my-3">This animation uses the keyframe rule used to animate a square div. It gradually changes the color
+        and changes the position. Furthermore the border-radius changes throughout the animation. It repeats itself for
+        an infinite amount of time. CSS only!!!</p>
+    <div class="basic"></div>
+    <h3 class="my-3">Canvas animations</h3>
+    <p class="my-3">
+        With Canvas animations we can create interactive animations. Unlike the keyframes and transitions,
+        canvas animations are created in Javascript. The biggest disadvantage is, that once a shape is drawn, we cannot
+        change it. If we want to move it, we have to redraw it. If the animations are complex, it depends on the
+        performance
+        of the computer, how fast it will load.
+    </p>
+    <h4 class="my-3">Example</h4>
+    <p class="my-3">This canvas animation is copied from
+        <a href="https://developer.mozilla.org/de/docs/Web/Guide/HTML/Canvas_Tutorial/Basic_animations">Mozilla</a>.
+        It shows a super simple basic animation of the earth in our solar system. It makes use of the "rotate" method.
+    </p>
+    <canvas id="canvas" width="300" height="300"></canvas>
+    <h3 class="my-3">SVG animations</h3>
+    <p class="my-3">description TODO</p>
+    <h4 class="my-3">Examples</h4>
+    <p class="my-3">This example creates a rectangle and changes its opacity from 1 to 0 in 5s and repeats itself
+        indefinitely.</p>
+    <div>
+        <svg width="500" height="100">
+            <rect height="50" width="50">
+                <animate attributeType="CSS" attributeName="opacity" from="1" to="0" dur="5s"
+                         repeatCount="indefinite"></animate>
+            </rect>
+        </svg>
+    </div>
+    <p class="my-3">Here we create two circles. They are animated exactly the same, but animation of the blue circle is
+        started 0.01s later than the orange one. That's why the orange circle has kind of a blue "shadow". Click on the
+        circle to animate it!</p>
+    <div>
+        <svg width="500" height="100">
+            <circle id="blue-circle" r="30" cx="30" cy="30" fill="blue"/>
+            <circle id="orange-circle" r="30" cx="30" cy="30" fill="orange"/>
+            <animate
+                    xlink:href="#orange-circle"
+                    attributeName="cx"
+                    from="50"
+                    to="450"
+                    dur="1s"
+                    begin="click"
+                    fill="freeze"
+                    id="ocirc"/>
+            <animate
+                    xlink:href="#blue-circle"
+                    attributeName="cx"
+                    from="50"
+                    to="450"
+                    dur="1s"
+                    begin="ocirc.begin + 0.01s"
+                    fill="freeze"/>
+        </svg>
+    </div>
+    <p class="my-3">This example shows a bouncing ball. It uses the "values", "keyTimes" and "keySplines" attribute.
+        With the values we define the path the ball will follow. The "keyTimes" define in which time the circle should
+        reach the values. With the keySplines we define the speedcurve (bezier curve) the "keyTimes" follow, so that we
+        get this bouncing effect. Click on the circle to animate it!</p>
+    <div>
+        <svg width="500" height="350">
+            <circle id="green-circle" r="30" cx="30" cy="30" fill="green"/>
+
+            <animate
+                    xlink:href="#green-circle"
+                    attributeName="cy"
+                    from="50"
+                    to="250"
+                    dur="3s"
+                    begin="click"
+                    calcMode="spline"
+                    values="50; 250; 120; 250; 170; 250; 210; 250"
+                    keyTimes="0; 0.15; 0.3; 0.45; 0.6; 0.75; 0.9; 1"
+                    keySplines="0.42 0 1 1;
+                       0 0 0.59 1;
+                       0.42 0 1 1;
+                       0 0 0.59 1;
+                       0.42 0 1 1;
+                       0 0 0.59 1;
+                       0.42 0 1 1"
+                    fill="freeze"
+                    id="circ-anim"/>
+        </svg>
+    </div>
+    <p class="my-3">And finally to showcase you what amazing can be animated with svg animations, I copied this snipped
+        from this <a href="https://codepen.io/felixhornoiu/pen/dovub">Codepen</a>. It shows a countdown created only
+        with svg components (no JS!)</p>
+    <div class=cont>
+        <svg class="countdown" viewbox="0 0 400 400">
+            <path fill="#000">
+                <animate
+                        attributeName="d"
+                        dur="6000ms"
+                        repeatCount="indefinite"
+                        values="
+        M 68,0
+         52,15.899 0,47 12,212 47,251.793 120,207 110,325.793 78,328.793 57,296.793 10,318.793
+	23.239,408.725 43.143,421.587 173,390 188,353 179,151 177.959,96.168 122,87 111,149 82,146 84,88 177,113 181.843,28 117,0,0
+        Z;M 68,0
+         52,15.899 0,47 12,212 47,251.793 120,207 110,325.793 78,328.793 57,296.793 10,318.793
+	23.239,408.725 43.143,421.587 173,390 188,353 179,151 177.959,96.168 122,87 111,149 82,146 84,88 177,113 181.843,28 117,0,0
+        Z;
+
+
+
+              M 78,0
+         15,31.587 0,68.587 25,229.587 7,247.587 6,324.587 66,334.587 77,272.587 106,275.587 104,333.587
+	6.959,307.755 6.157,393.587 71,421.587 136,405.688 188,374.587 176,209.587 68,214.587 72,137.587 107,124.587 107.535,227.573
+	156.882,222.671 164.761,12.862 144.857,0,0
+        Z;M 78,0
+         15,31.587 0,68.587 25,229.587 7,247.587 6,324.587 66,334.587 77,272.587 106,275.587 104,333.587
+	6.959,307.755 6.157,393.587 71,421.587 136,405.688 188,374.587 176,209.587 68,214.587 72,137.587 107,124.587 107.535,227.573
+	156.882,222.671 164.761,12.862 144.857,0,0
+        Z;
+             M 78,0 114.167,0 24.667,18.725 0,42.725 0,112.725 14.667,126.725 73.333,109.392 95.333,107.392
+	107.333,126.725 74,260.725 57.333,318.725 49.333,364.726 54,384.726 95.333,402.059 122,398.059 147.333,259.392 163.333,187.392
+	168.934,166.671 174,142.725 185.333,80.059 198,18.725 190.667,4.725 163.333,0;M 78,0 114.167,0 24.667,18.725 0,42.725 0,112.725 14.667,126.725 73.333,109.392 95.333,107.392
+	107.333,126.725 74,260.725 57.333,318.725 49.333,364.726 54,384.726 95.333,402.059 122,398.059 147.333,259.392 163.333,187.392
+	168.934,166.671 174,142.725 185.333,80.059 198,18.725 190.667,4.725 163.333,0 ;
+
+
+              M 100,5 144.857,0 15,31.587 0,68.587 9,270.587 10.041,325.418 66,334.587 77,272.587 106,275.587
+	104,333.587 11,308.587 6.157,393.587 71,421.587 136,405.688 188,374.587 176,209.587 139,187.587 68,214.587 72,137.587
+	107,124.587 128,156.587 175,134.587 164.761,12.862;M 100,5 144.857,0 15,31.587 0,68.587 9,270.587 10.041,325.418 66,334.587 77,272.587 106,275.587
+	104,333.587 11,308.587 6.157,393.587 71,421.587 136,405.688 188,374.587 176,209.587 139,187.587 68,214.587 72,137.587
+	107,124.587 128,156.587 175,134.587 164.761,12.862;
+
+
+              M 100,0 28.843,20 0,34 0,202 11.843,279 27.843,292 70.843,277 99.843,280 97.843,338 50.843,337 0,398
+	55.843,438 105.843,431 162.843,378 179.843,294 173.843,214 135.843,187 86.921,195 67.843,161 72.843,125 165.843,109 179.843,31
+	156.843,0;M 100,0 28.843,20 0,34 0,202 11.843,279 27.843,292 70.843,277 99.843,280 97.843,338 50.843,337 0,398
+	55.843,438 105.843,431 162.843,378 179.843,294 173.843,214 135.843,187 86.921,195 67.843,161 72.843,125 165.843,109 179.843,31
+	156.843,0;
+
+              M 100,0 95.843,11 103.843,223 86.843,232 73.182,228.376 67.986,155.124 68.997,23.132 47.998,23.132
+	1.99,42.63 9.489,221.121 0,305.118 41.998,323.117 101.995,311.117 103.843,332 107.843,363 105.843,394 109.843,406 127.843,406
+	160.843,399.101 173.843,391 173.843,357 173.843,18 165.843,0;M 100,0 95.843,11 103.843,223 86.843,232 73.182,228.376 67.986,155.124 68.997,23.132 47.998,23.132
+	1.99,42.63 9.489,221.121 0,305.118 41.998,323.117 101.995,311.117 103.843,332 107.843,363 105.843,394 109.843,406 127.843,406
+	160.843,399.101 173.843,391 173.843,357 173.843,18 165.843,0;
+
+
+              M 100,0 93.853,0 3.216,55.855 41.341,131 106.008,117.667 104.674,156.333 47.341,181 26.674,203
+	35.341,268.333 96.008,267 95.341,314.333 78.674,333.667 31.508,328.5 0,391.5 101.008,423 177.508,368 172.508,236 142.508,226.5
+	136.508,208 159.008,197 172.508,181.5 177.508,36.5 152.508,11 ;M 100,0 93.853,0 3.216,55.855 41.341,131 106.008,117.667 104.674,156.333 47.341,181 26.674,203
+	35.341,268.333 96.008,267 95.341,314.333 78.674,333.667 31.508,328.5 0,391.5 101.008,423 177.508,368 172.508,236 142.508,226.5
+	136.508,208 159.008,197 172.508,181.5 177.508,36.5 152.508,11;
+
+              M 100,0 44,16.587 1.204,55.672 0,158.587 0,200.587 13.676,209.587 53,199.587 69,139.587 100,139.587
+	94,191.587 39,292.587 0,362.587 34,429.587 108,405.688 163,405.688 175,373.587 153,332.587 115.5,337.587 96,331.587
+	164.51,210.793 164.51,119.587 151,6.587 108,0;M 100,0 44,16.587 1.204,55.672 0,158.587 0,200.587 13.676,209.587 53,199.587 69,139.587 100,139.587
+	94,191.587 39,292.587 0,362.587 34,429.587 108,405.688 163,405.688 175,373.587 153,332.587 115.5,337.587 96,331.587
+	164.51,210.793 164.51,119.587 151,6.587 108,0;
+
+              M 100,0 73.058,122.499 74.809,136.189 73.319,189.189 70.319,344.189 23.319,359.189 57.319,426.189
+	131.319,402.29 186.319,402.29 198.319,370.189 176.319,329.189 138.819,334.189 132.389,332.21 130.335,308.766 139.319,116.189
+	145.319,3.189 104.991,0 62.309,27.189 0,62.189 10.809,86.189 36.809,128.189 62.309,121.189 73.058,122.499;M 100,0 73.058,122.499 74.809,136.189 73.319,189.189 70.319,344.189 23.319,359.189 57.319,426.189
+	131.319,402.29 186.319,402.29 198.319,370.189 176.319,329.189 138.819,334.189 132.389,332.21 130.335,308.766 139.319,116.189
+	145.319,3.189 104.991,0 62.309,27.189 0,62.189 10.809,86.189 36.809,128.189 62.309,121.189 73.058,122.499;"
+                />
+            </path>
+        </svg>
+    </div>
+</div>
+<script src="js/animations.js"></script>
+<script src="webjars/jquery/3.5.1/jquery.min.js"></script>
+<script src="webjars/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

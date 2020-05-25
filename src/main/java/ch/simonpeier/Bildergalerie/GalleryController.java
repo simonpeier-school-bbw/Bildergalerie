@@ -53,4 +53,9 @@ public class GalleryController {
     public String showVideo(){
         return "video";
     }
+
+    @GetMapping("/animations")
+    public String showAnimation(){
+        return "animations";
+    }
 }
